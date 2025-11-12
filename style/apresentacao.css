@@ -1,0 +1,130 @@
+html, body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: rgb(255, 134, 140);
+}
+
+body {
+    background-image: linear-gradient(170deg, black 35%, rgb(119, 6, 12));
+}
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+#header-lista {
+    display: flex;
+    list-style-type: none;
+    gap: 5em;
+    padding: 0;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+.container-imagem {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#Apresentacao .container-imagem {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+    transition: 1.5s;
+    margin-right: 2em;
+}
+
+#Apresentacao .container-imagem:hover {
+    border-radius: 22%;
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+#Foto {
+    transition: 1.5s;
+}
+
+#Foto:hover {
+    scale: 1.5;
+}
+
+.logo {
+    height: 5rem;
+}
+
+.container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    border: white solid 1px;
+    width: 55vw;
+    transition: 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#Apresentacao .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content:has(> .lista) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content:hover {
+    scale: 1.05;
+}
+
+footer {
+    padding-left: 15px;
+    padding-bottom: 0.5em;
+}
+
+#conhecer {
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 1142px) {
+    #Apresentacao .content {
+        flex-direction: column;
+    }
+    .content {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #header-lista {
+        gap: 1em;
+    }
+}
